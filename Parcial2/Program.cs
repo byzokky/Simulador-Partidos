@@ -13,7 +13,7 @@ namespace Parcial2
         static void Main(string[] args)
         {
             Menu startMenu = new Menu();
-            startMenu.DisplayMenu();
+            startMenu.TheMenu();
         }
     }
 }

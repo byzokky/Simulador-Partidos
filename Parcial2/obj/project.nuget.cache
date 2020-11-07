@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d9pNk9reTvHJ+ZP6LnF692m3ts5YkamCx76/I3dyKsE5dsjI603xhTD4hcRCbR3brhpHt4FGSK7IZQQZjy+UiA==",
+  "dgSpecHash": "SIqRMtzgqsfpJsBOou19WRE2M+kIKVj55Bbe9UPDCdboLrEhWD/uZkNFep2QxLRUpOwRS4hWWpUgUdd4SHaoVg==",
   "success": true,
-  "projectFilePath": "D:\\Programación\\git\\Parcial2\\Parcial2\\Parcial2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\BUITRAGO CHAVEZ\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\BUITRAGO CHAVEZ\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\Simulador-Partidos\\parcial2\\parcial2.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
