@@ -16,12 +16,10 @@ namespace Parcial2.Manejadores
         public Validator StringValidate { get; set; }
         public Validator IntValidate { get; set; }
         public Validator DoubleValidate { get; set; }
-        public GestorObserver GestorSelecciones { get; set; }
 
         public ManejadorTorneo()
         {
             JsonHandler = new ManejadorJson();
-            GestorSelecciones = new GestorObserver();
 
             StringValidate = new Validator();
             StringValidate.RuleList.Add(new StrRule());
@@ -46,7 +44,6 @@ namespace Parcial2.Manejadores
             {
                 s = JsonHandler.Load(file.Name.Remove(file.Name.Length - 5));
                 selecciones.Add(s);
-                GestorSelecciones.Suscribir(s);
             }
         }
         public int MostrarSelecciones(List<Seleccion> selecciones)
@@ -228,8 +225,7 @@ namespace Parcial2.Manejadores
             {
                 puntosVisitante = 3;
             }
-            GestorSelecciones.Notificar(Local, golesLocal, puntosLocal);
-            GestorSelecciones.Notificar(Visitante, golesVisitante, puntosVisitante);
+            
             JsonHandler.Save(Local);
             JsonHandler.Save(Visitante);
         }

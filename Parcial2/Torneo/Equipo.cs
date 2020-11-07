@@ -13,7 +13,7 @@ namespace Parcial2.Torneo
         public int TarjetasRojas { get; set; }
         public Seleccion Seleccion { get; set; }
         public List<Jugador> Jugadores { get; set; }
-        public List<Jugador> JugadoresAmarilla { get; set; }
+        public List<Jugador> ConAmarilla { get; set; }
         public bool EsLocal { get; set; }
 
         #endregion Properties
@@ -22,15 +22,14 @@ namespace Parcial2.Torneo
         public Equipo(Seleccion s, bool local)
         {
             Seleccion = s;
-            // Se le agregó .ToList para que creara una copia de la lista y no se pasara como referencia
             Jugadores = Seleccion.Jugadores.ToList();
-            JugadoresAmarilla = new List<Jugador>();
+            ConAmarilla = new List<Jugador>();
             EsLocal = local;
         }
         #endregion Initialize
 
         #region Methods
-        public void ExpulsarJugador(string name)
+        public void Expulsar(string name)
         {
             try
             {
@@ -56,19 +55,19 @@ namespace Parcial2.Torneo
         {
             try
             {
-                if(JugadoresAmarilla.Any(j => j.Nombre == name))
+                if(ConAmarilla.Any(j => j.Nombre == name))
                 {
                     TarjetasAmarillas++;
-                    Jugador expulsado = JugadoresAmarilla.First(j => j.Nombre == name);
+                    Jugador expulsado = ConAmarilla.First(j => j.Nombre == name);
                     Console.WriteLine($"El jugador {expulsado.Nombre} recibió una tarjeta amarilla");
-                    ExpulsarJugador(expulsado.Nombre);
-                    JugadoresAmarilla.Remove(expulsado);
+                    Expulsar(expulsado.Nombre);
+                    ConAmarilla.Remove(expulsado);
                 }
                 else
                 {
                     Jugador jugadorAmarilla = Jugadores.First(j => j.Nombre == name);
                     TarjetasAmarillas++;
-                    JugadoresAmarilla.Add(jugadorAmarilla);
+                    ConAmarilla.Add(jugadorAmarilla);
                     Console.WriteLine($"El jugador {jugadorAmarilla.Nombre} recibió una tarjeta amarilla");
                 }
             }

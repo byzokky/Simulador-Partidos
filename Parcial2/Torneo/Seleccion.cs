@@ -40,7 +40,7 @@ namespace Parcial2.Torneo
         #endregion Initialize
         
         #region Methods
-        public void Actualizar(int goles, int puntos)
+        public void Tabla(int goles, int puntos)
         {
             GolesTotales += goles;
             PuntosTotales += puntos;

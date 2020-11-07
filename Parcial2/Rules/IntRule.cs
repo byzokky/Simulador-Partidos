@@ -4,7 +4,7 @@ namespace Parcial2.Rules
 {
     public class IntRule : IRule
     {
-        public bool CheckRule(object value)
+        public bool Verificar(object value)
         {
             int result = 0;
             string valor = value as string;

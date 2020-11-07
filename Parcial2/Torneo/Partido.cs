@@ -15,10 +15,6 @@ namespace Parcial2.Torneo
 
         #region Initialize
         
-        public Partido()
-        {
-
-        }
         public Partido(Seleccion Local, Seleccion Visitante) 
         {
             EquipoLocal = new Equipo(Local, true);
@@ -40,14 +36,15 @@ namespace Parcial2.Torneo
             nombres.Add(JugadoresVisitantes[position]);
             return nombres;
         }
-        private void CalcularExpulsiones()
+    
+        private void Expulsiones()
         {
             List<String> nombres = GetNames();
             EquipoLocal.ExpulsarJugador(nombres[0]);
             EquipoVisitante.ExpulsarJugador(nombres[1]);
         }
 
-        private void CalcularAmarillas()
+        private void TAmarillas()
         {
             List<String> nombres = GetNames();
             EquipoLocal.DarAmarilla(nombres[0]);
@@ -68,12 +65,12 @@ namespace Parcial2.Torneo
             {
                 for(int i = 0; i < 8; i++)
                 {
-                    CalcularAmarillas();
+                    TAmarillas();
                 }
 
                 for(int i = 0; i < 5; i++)
                 {
-                    CalcularExpulsiones();
+                    Expulsiones();
                 }
                 
                 CalcularResultado();

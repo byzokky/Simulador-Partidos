@@ -36,7 +36,7 @@ namespace Parcial2.Menus
             DoubleValidate.RuleList.Add(new DoubleRule());
         }
 
-        public void DisplayMenu()
+        public void TheMenu()
         {
             Gestor.CargarSelecciones(Selecciones);
             string opcion = "";
@@ -151,7 +151,6 @@ namespace Parcial2.Menus
                     if(validate)
                     {
                         listaJugadores.Add(new Jugador());
-                        Gestor.CrearJugador(listaJugadores.Last(), atributos);
                         cantJugadores++;
                     }
                     else
@@ -173,8 +172,6 @@ namespace Parcial2.Menus
                     } 
                 }
                 Seleccion s = new Seleccion(nombreSelec, listaJugadores);
-                Gestor.GestorSelecciones.Suscribir(s);
-                Gestor.JsonHandler.Save(s);
             }
             else
             {

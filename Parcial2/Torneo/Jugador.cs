@@ -5,22 +5,22 @@ namespace Parcial2.Torneo
     public class Jugador
     {
         #region Properties  
-        [JsonProperty("nombre")]
+        [JsonProperty("Nombre:")]
         public string Nombre { get; set; }
 
-        [JsonProperty("edad")]
+        [JsonProperty("Edad:")]
         public int Edad { get; set; }
         
-        [JsonProperty("posicion")]
+        [JsonProperty("Posicion:")]
         public int Posicion { get; set; }
 
-        [JsonProperty("ataque")]
+        [JsonProperty("Ataque:")]
         public double Ataque { get; set; }
 
-        [JsonProperty("defensa")]
+        [JsonProperty("Defensa:")]
         public double Defensa { get; set; }
 
-        [JsonProperty("goles")]
+        [JsonProperty("Goles:")]
         public double Goles { get; set; }
 
         #endregion Properties
